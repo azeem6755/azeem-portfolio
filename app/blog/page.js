@@ -4,8 +4,12 @@ import { personalData } from "@/utils/data/personal-data";
 import BlogCard from "../components/homepage/blog/blog-card";
 
 async function getBlogs() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
-  console.log(res)
+  console.log(`${personalData.devUsername}`);
+  const res = await fetch(`https://dev.to/api/articles/latest?username=${personalData.devUsername}`, {
+    headers: {
+      "Accept": "application/vnd.forem.api-v1+json"
+    }
+  })
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
