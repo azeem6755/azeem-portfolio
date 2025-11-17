@@ -82,6 +82,8 @@ import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
 import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
+import terraform from '../app/assets/svg/skills/terraform.svg'
+import jenkins from '../app/assets/svg/skills/jenkins.svg'
 
 
 
@@ -254,6 +256,10 @@ export const skillsImage = (skill) => {
       return sqlalchemy;
     case 'fastapi':
       return fastapi;
+    case 'terraform':
+      return terraform;
+    case 'jenkins':
+      return jenkins;
     default:
       break;
   }
